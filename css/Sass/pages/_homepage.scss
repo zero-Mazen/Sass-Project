@@ -1,0 +1,211 @@
+.product
+{
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    @include prefixer (animation , fadeInOut 2s infinite linear , webkit moz o);
+    @include prefixer ( box-shadow , 10px 10px 10px 10px #ccc , webkit moz o ms  );
+    .overlay
+    {
+        @include overlay ;
+        background-color: rgba(#e2494c, .4);
+        color: white;
+
+    }
+}
+/* start Slider*/
+.slider
+{
+    blockquote
+    { 
+        font : 
+        {
+            size: 20px;
+            weight : bold ;
+            style : italic ;
+            family: Tahoma ,Arial ;
+        } 
+        color :#5e5e5e;
+        width: 80%;
+        line-height: 1.7;
+        text-align: center;
+        margin: 30px auto;
+
+    }
+    img {
+        width: 100%;
+
+    }
+    .bullets {
+        text-align: center;
+        li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $grayColor;
+            border: 2px solid $grayColor;
+            cursor : pointer;
+            &.active , &:hover
+            {
+                background-color: #fff;
+                border: 2px solid #333;
+            }
+
+        }
+    }
+
+}
+/* end Slider*/
+/* start Services*/
+.services
+{
+    
+    .service-box
+    {
+        @media #{$minMedium}
+        {
+        float: $float-left;
+        width: (100% / 3);
+        
+        &:not(:last-of-type) {
+            padding-right: 20px;
+        }
+
+        }
+        @media #{$maxMobile}
+        {
+            i {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+        .service-title{
+            color: #666;
+        i {
+            font-size: 35px;
+            position: relative;
+            top: 4px; 
+
+        }
+                };
+        .service-desc{
+        color: #777;
+        line-height: 1.5;
+        }
+        .link {
+            color: $redColor;
+            text-decoration: none;
+
+        }
+    }
+}
+/*End Services*/
+/* start our player*/
+.our-players {
+
+    .player-box {
+        // padding-right: 20px;
+        @media #{$minSmall}
+        {
+        float: $float-left;
+        width: (100% / 2);
+        text-align: center;
+        margin-bottom: 40px;
+        }
+        @media #{$minMedium} {
+            width: (100% / 3 );
+            text-align: $text-left ;
+            margin-bottom: 40px;
+            padding: {
+                right: 20px;
+                left: 20px;
+            }
+        }
+        @media #{$minMedium} {
+            width: (100% / 5 );
+        }
+        @media #{$maxMobile} {
+            margin-bottom: 40px;
+        }
+        .player-img
+        {
+            max-width: 100%;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        .player-title {
+            font-weight: normal;
+            color: #666;
+            span {
+                font-weight: bold;
+
+            }
+
+        }
+
+        ;
+
+        .player-desc {
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .link {
+            color: $redColor;
+            text-decoration: none;
+
+        }
+    }
+}
+/*start lorem ipsum*/
+.lorem-ipsum
+{
+    .lorem-box
+    {
+        
+        @media #{$minSmall}
+        {
+        float: $float-left;
+        width: (94% / 3);
+        
+        &:not(:last-of-type) {
+            margin-right: 3%;
+        }
+
+        }
+        @media #{$maxMobile} {
+            float: none;
+            display: block;
+        &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+        .lorem-img
+        {
+            max-width: 100%;
+        }
+    }
+}
+/*end lorem ipsum*/
+
+/*End oer player*/
+@include keyFrame (fadeInOut)
+{
+    0% {
+            opacity: 0.5;
+        }
+    
+        50% {
+            opacity: 1;
+        }
+    
+        100% {
+            opacity: 0.5;
+        }
+}
